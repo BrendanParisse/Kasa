@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Collapse = ({ content, title }) => {
+const Collapse = ({ id, content, title }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleCollapse = () => {
@@ -8,7 +8,7 @@ const Collapse = ({ content, title }) => {
     };
 
     return (
-        <li>
+        <li key={id}>
             <div className="Title" onClick={toggleCollapse}>
                 <h2>{title}</h2>
                 <span className={`flèche ${isOpen ? "Rotation" : "flècheR"}`}>

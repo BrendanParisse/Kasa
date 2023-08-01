@@ -1,0 +1,38 @@
+footer {
+    background-color: black;
+    @extend %column-center;
+    color: white;
+    margin-top: 1em;
+    width: 100%;
+
+    & img {
+        width: 10%;
+        padding: 4em 0em 2em 0em;
+
+        @media screen and (max-width: $mediatablette) {
+            width: 12%;
+            padding: 4em 0em 3em 0em;
+        }
+
+        @media screen and (max-width: $mediamobile) {
+            width: 22%;
+            padding: 3em 0em 1em 0em;
+        }
+    }
+
+    & p {
+        color: #FFF;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 142.6%;
+        padding: 0em 0em 1em 0em;
+
+        @media screen and (max-width: $mediamobile) {
+            text-align: center;
+            width: 133.594px;
+            font-size: 12px;
+            padding: 0em 0em 3em 0em;
+        }
+    }
+}

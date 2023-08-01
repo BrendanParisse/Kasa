@@ -1,0 +1,170 @@
+.SectionApropos {
+    & ul {
+        display: grid;
+        @include grid-template-set-columns(1);
+        margin: auto;
+        padding: 2em 0em 2em 0em;
+        gap: 2em;
+    }
+
+    & .Title {
+        position: relative;
+        display: flex;
+        background-color: #FF6060;
+        color: white;
+        padding: 1em;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 0.4em;
+        z-index: 2;
+
+        @media screen and (max-width: $mediatablette) {
+            padding: 0.7em;
+        }
+
+        @media screen and (max-width: $mediamobile) {
+            padding: 0.7em;
+        }
+
+
+        & h2 {
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+
+            @media screen and (max-width: $mediatablette) {
+                font-size: 13px;
+            }
+
+            @media screen and (max-width: $mediamobile) {
+                font-size: 13px;
+            }
+        }
+    }
+
+    & .Card-content {
+        display: flex;
+        height: 40px;
+        overflow: hidden;
+        border-radius: 0 0 0.4em 0.4em;
+        background-color: $gris;
+        color: $rouge;
+        font-size: 18px;
+        margin-bottom: -3em;
+        transition: transform 0.6s ease;
+        transform: translateY(-40px);
+
+        @media screen and (max-width: $mediamobile) {
+            font-size: 12px;
+        }
+    }
+
+    & .Visible {
+        height: auto;
+        transform: translateY(0);
+        padding: 1em;
+        margin-bottom: 0.1em;
+        line-height: $intervalle;
+    }
+
+    & .Rotation {
+        transition: all 0.5s;
+        transform: rotate(0deg);
+    }
+
+    & .flècheR {
+        transition: all 0.5s;
+        transform: rotate(180deg);
+    }
+}
+
+.Sectionlogement {
+    & .Liste_Déroulante {
+        display: grid;
+        @include grid-template-set-columns(2);
+        padding: 2em 0em 2em 0em;
+        gap: 4em;
+        list-style-type: none;
+
+        @media screen and (max-width: $mediamobile) {
+            @include grid-template-set-columns(1);
+            gap: 2em;
+        }
+
+
+        & .Title {
+            position: relative;
+            display: flex;
+            background-color: #FF6060;
+            color: white;
+            padding: 1em;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 0.4em;
+            z-index: 4;
+
+            @media screen and (max-width: $mediatablette) {
+                padding: 0.6em;
+            }
+
+            @media screen and (max-width: $mediamobile) {
+                padding: 0.7em;
+            }
+
+            & h2 {
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 500;
+
+                @media screen and (max-width: $mediatablette) {
+                    font-size: 13px;
+                }
+
+                @media screen and (max-width: $mediamobile) {
+                    font-size: 13px;
+                }
+            }
+
+            & img {
+                cursor: pointer;
+            }
+        }
+
+        & .Card-content {
+            display: flex;
+            height: 40px;
+            overflow: hidden;
+            border-radius: 0 0 0.4em 0.4em;
+            background-color: $gris;
+            color: $rouge;
+            margin-bottom: -3em;
+            transition: transform 0.6s ease;
+            transform: translateY(-40px);
+            z-index: 1;
+
+            @media screen and (max-width: $mediamobile) {
+                font-size: 12px;
+            }
+
+
+        }
+
+        & .Visible {
+            height: auto;
+            transform: translateY(0);
+            padding: 1em;
+            margin-bottom: 0.1em;
+            line-height: $intervalle;
+        }
+
+        & .Rotation {
+            transition: all 0.5s;
+            transform: rotate(0deg);
+        }
+
+        & .flècheR {
+            transition: all 0.5s;
+            transform: rotate(180deg);
+        }
+    }
+}

@@ -1,0 +1,69 @@
+.bannerContainer {
+    border-radius: 25px;
+    height: 223px;
+    position: relative;
+
+    @media screen and (max-width: $mediatablette) {
+        margin: auto;
+    }
+
+    @media screen and (max-width: $mediamobile) {
+        border-radius: 10px;
+        height: 111px;
+    }
+
+    & .bannerimg {
+        border-radius: 25px;
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+
+        @media screen and (max-width: $mediamobile) {
+            border-radius: 10px;
+        }
+
+    }
+
+    & .bannerSombre {
+        background-color: #000000;
+        border-radius: 25px;
+        height: 100%;
+        left: 0;
+        opacity: 0.3;
+        position: absolute;
+        top: 0;
+        width: 100%;
+
+        @media screen and (max-width: $mediamobile) {
+            border-radius: 10px;
+        }
+    }
+
+    & h1 {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        color: #ffffff;
+        font-size: 48px;
+        font-weight: 500;
+
+        @media screen and (max-width: $mediatablette) {
+            font-size: 32px;
+            left: 15px;
+            text-align: start;
+            transform: translateY(-50%);
+        }
+
+        @media screen and (max-width: $mediamobile) {
+            width: 67%;
+            font-size: 24px;
+            left: 15px;
+            text-align: start;
+            transform: translateY(-50%);
+        }
+
+    }
+}

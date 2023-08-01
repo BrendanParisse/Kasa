@@ -1,0 +1,200 @@
+body {
+    max-width: 1440px;
+    margin: auto;
+    font-family: Montserrat;
+    font-weight: 500;
+}
+
+main {
+    width: 85%;
+    margin: auto;
+
+    @media screen and (max-width: $mediatablette) {
+        width: 90%;
+    }
+
+    @media screen and (max-width: $mediamobile) {
+        width: 90%;
+    }
+
+    /* PAGE 404 */
+
+    & .SectionNot404 {
+        @extend %column-center;
+        color: $rouge;
+        text-decoration: none;
+        gap: 4em;
+
+        & h1 {
+            font-size: 288px;
+
+            @media screen and (max-width: $mediatablette) {
+                font-size: 248px;
+            }
+
+            @media screen and (max-width: $mediamobile) {
+                font-size: 96px;
+            }
+        }
+
+        & p {
+            font-size: 36px;
+
+            @media screen and (max-width: $mediamobile) {
+                width: 90%;
+                font-size: 18px;
+                text-align: center;
+            }
+        }
+
+        & a {
+            color: $rouge;
+            text-decoration: underline;
+            font-size: 11px;
+            font-style: normal;
+            font-weight: 500;
+            margin-bottom: 3em;
+        }
+    }
+
+    /* PAGE LOGEMENT */
+
+    & .Fichelogement {
+        position: relative;
+
+        & .Infoslogement {
+            width: 70%;
+            margin-top: 1.5em;
+            margin-bottom: 1.5em;
+
+
+            @media screen and (max-width: $mediamobile) {
+                margin-bottom: 1em;
+                width: 100%;
+            }
+
+            & h1 {
+                color: $rouge;
+                font-size: 36px;
+                font-style: normal;
+                font-weight: 500;
+
+                @media screen and (max-width: $mediamobile) {
+                    font-size: 18px;
+                }
+            }
+
+            & p {
+                color: $rouge;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: $intervalle;
+
+                @media screen and (max-width: $mediamobile) {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        & .InfosPersonne {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: flex;
+            color: $rouge;
+            align-items: center;
+
+            @media screen and (max-width: $mediamobile) {
+                position: relative;
+                justify-content: space-between;
+            }
+
+            & .NomPhoto {
+                display: flex;
+                align-items: center;
+
+                @media screen and (max-width: $mediamobile) {
+                    position: relative;
+                    order: 2;
+                }
+            }
+
+            & p {
+                padding-right: 2em;
+                text-align: right;
+
+                @media screen and (max-width: $mediamobile) {
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 500;
+                }
+            }
+
+            & .Cercle {
+                border-radius: 50%;
+                width: 64px;
+                height: 64px;
+
+                @media screen and (max-width: $mediamobile) {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+
+            & span {
+                position: absolute;
+                top: 75px;
+
+                @media screen and (max-width: $mediamobile) {
+                    position: initial;
+                    order: 1;
+                }
+
+                & .star {
+                    font-size: 22px;
+
+                    @media screen and (max-width: $mediamobile) {
+                        font-size: 14px;
+
+                    }
+                }
+
+                & .vide {
+                    color: $gris-foncé;
+                }
+
+                & .pleine {
+                    color: $rouge;
+                }
+            }
+
+        }
+
+        & .infos {
+            display: flex;
+            gap: 0.5em;
+            flex-wrap: wrap;
+
+            & li {
+                @extend %flex-center;
+                width: 15%;
+                background-color: $rouge;
+                color: white;
+                padding: 0.3em 0em 0.3em;
+                border-radius: 10px;
+                font-size: 10px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: $intervalle;
+
+                @media screen and (max-width: $mediamobile) {
+                    width: 31%;
+                    margin-bottom: 1em;
+                    border-radius: 6px;
+                }
+            }
+        }
+
+    }
+}

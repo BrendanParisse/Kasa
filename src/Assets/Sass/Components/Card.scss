@@ -1,0 +1,113 @@
+.SectionHome ul {
+    background-color: $gris;
+    border-radius: 1em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    padding: 3.5em 2.5em 2em 2.5em;
+    gap: 2em;
+    margin: auto;
+    margin-top: 2em;
+
+    @media screen and (max-width: $mediatablette) {
+        background-color: white;
+        margin-top: 0em;
+        padding: 2em 0em 2em 0em;
+        @include grid-template-set-columns(2);
+    }
+
+    @media screen and (max-width: $mediamobile) {
+        background-color: white;
+        margin-top: 0em;
+        padding: 2em 0em 2em 0em;
+        @include grid-template-set-columns(1);
+    }
+
+    & li {
+        position: relative;
+        width: 100%;
+
+        & img {
+            object-fit: cover;
+            width: 100%;
+            height: 340px;
+            border-radius: 0.4em;
+
+            @media screen and (max-width: $mediamobile) {
+                height: 255px;
+            }
+        }
+
+        & .Card-sombre {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 0.4em;
+            background: rgb(6, 6, 6);
+            background: linear-gradient(0deg, rgba(6, 6, 6, 1) 0%, rgba(0, 0, 0, 0.13217787114845936) 35%);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2);
+        }
+
+        & h3 {
+            width: 82%;
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: #FFF;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+
+            @media screen and (max-width: $mediamobile) {
+                top: 210px;
+            }
+        }
+    }
+
+    & li:nth-child(n + 19) {
+        grid-column: 1 / 3;
+        /* span two columns */
+        grid-row: 7 / 8;
+        justify-self: center;
+        width: 48%;
+
+        @media screen and (max-width: $mediatablette) {
+            grid-column: 1/1;
+            grid-row: 10/10;
+            justify-self: stretch;
+            width: 100%;
+        }
+
+        @media screen and (max-width: $mediamobile) {
+            grid-column: 1/1;
+            grid-row: 19/20;
+            justify-self: stretch;
+            width: 100%;
+        }
+
+    }
+
+    & li:nth-child(n + 20) {
+        grid-column: 2 / 4;
+        grid-row: 7 / 8;
+        justify-self: center;
+        width: 48%;
+
+        @media screen and (max-width: $mediatablette) {
+            grid-column: 2/2;
+            grid-row: 10/10;
+            justify-self: stretch;
+            width: 100%;
+        }
+
+        @media screen and (max-width: $mediamobile) {
+            grid-column: 1/1;
+            grid-row: 20/20;
+            justify-self: stretch;
+            width: 100%;
+        }
+    }
+
+}

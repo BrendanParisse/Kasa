@@ -1,0 +1,58 @@
+.carousel {
+    @extend %column-center;
+    position: relative;
+
+    & .ImgCarousel {
+        height: 415px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 25px;
+
+        @media screen and (max-width: $mediatablette) {
+            height: 255px;
+            border-radius: 10px;
+
+        }
+
+        @media screen and (max-width: $mediamobile) {
+            height: 255px;
+            border-radius: 10px;
+        }
+    }
+
+    & .Flèche {
+        position: absolute;
+
+        @media screen and (max-width: $mediatablette) {
+            height: 25%;
+
+
+        }
+
+        @media screen and (max-width: $mediamobile) {
+            height: 15%;
+
+        }
+
+    }
+
+    & .FlècheGauche {
+        left: 10px;
+    }
+
+    & .FlècheDroite {
+        right: 10px;
+    }
+
+    & .SlideNumber {
+        color: white;
+        font-size: 18px;
+        position: absolute;
+        bottom: 10px;
+
+        @media screen and (max-width: $mediamobile) {
+            display: none;
+        }
+    }
+
+}

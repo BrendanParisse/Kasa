@@ -1,0 +1,7 @@
+@mixin grid-template-set-columns($section) {
+    grid-template-columns: repeat($section, 1fr);
+}
+
+@mixin grid-template-set-rows($section) {
+    grid-template-rows: repeat($section, 1fr);
+}

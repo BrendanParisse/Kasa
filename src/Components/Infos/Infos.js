@@ -23,7 +23,7 @@ const Infos = ({ title, location, name, picture, tags, note }) => {
                         [...Array(5)].map((_, index) => {
                             return (<i
                                 key={index}
-                                className={`fa-solid fa-star star ${index + 1 < note ? 'pleine' : 'vide'}`}
+                                className={`fa-solid fa-star star ${index + 1 <= note ? 'pleine' : 'vide'}`}
                             ></i>)
                         })
                     }
